@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-env-test-deployment
+  labels:
+    app: node-env-test
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: node-env-test
+  template:
+    metadata:
+      labels:
+        app: node-env-test
+    spec:
+      containers:
+        - name: node-env-test
+          image: node-env-test:v2
+          ports:
+            - containerPort: 8080
+          envFrom:
+            - configMapRef:
+                 name: demo-env
