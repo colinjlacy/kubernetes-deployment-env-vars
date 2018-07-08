@@ -1,10 +1,12 @@
+# Using a ConfigMap to Set Environment Variables on a Kubernetes Deployment
+
 In this exercise, I mixed a couple of tutorials together from the Kubernetes site to demo the following:
 - deploying an app that has pre-configured env vars
 - leveraging those env vars in application code
 - updating the env vars on the server
 - running a fresh rollout to demo the updated env vars in action
 
-The idea is to demonstrate how to push out updates to environment variables (or, for that matter, secret keys) to a Kubernetes deployment.
+The idea is to demonstrate how to push out updates to environment variables (or, for that matter, secret keys) to a Kubernetes deployment.  It's meant to accompany [this blog post](https://webcake.co/using-a-configmap-to-set-environment-variables-on-a-kubernetes-deployment/).
 
 ## Prerequisites/Assumptions
 
